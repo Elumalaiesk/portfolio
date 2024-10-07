@@ -12,7 +12,7 @@
     body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     .w3-row-padding img {margin-bottom: 12px}
     /* Set the width of the sidebar to 120px */
-    .w3-sidebar {width: 120px;background: #222;}
+    .w3-sidebar {width: 120px;background: #ffffff; border-right: 1px solid black;}
     /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
     #main {margin-left: 120px}
     /* Remove margins from "page content" on small screens */
@@ -25,21 +25,25 @@
 <nav class="w3-sidebar w3-bar-white w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <!-- <img src="./assets/black.jpg" style="width:100%"> -->
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-grey">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-grey">
     <i class="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-grey">
     <i class="fa fa-eye w3-xxlarge"></i>
     <p>OUTPUTS</p>
   </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-grey">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
+  </a>
+  <a href="#game" class="w3-bar-item w3-button w3-padding-large w3-hover-grey">
+    <i class="fa fa-gamepad w3-xxlarge"></i>
+    <p class="w3-medium">Games</p>
   </a>
 </nav>
 
@@ -50,13 +54,14 @@
     <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
     <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
     <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    <a href="#game" class="w3-bar-item w3-button" style="width:25% !important">Games</a>
   </div>
 </div>
 
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-light-grey" id="home"> #wwwwwwwwww
+  <header class="w3-container w3-padding-32 w3-center w3-light-grey" id="home"> 
     <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Elumalai Saravanan</h1>
     <p style="font-size:large;"><b>R&D and Software developer.</b></p>
     <img src="./assets/black.jpg" alt="boy" class="w3-image" width="582" height="500">
@@ -64,14 +69,14 @@
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">Experience</h2>
+    <h2 class="w3-text-light-black">Experience</h2>
     <hr style="width:200px" class="w3-opacity">
     <p>I am humble software developer with one and a half years of experience in the R &D and software development.
        Files are developed and maintained by a professional web developer, specializing in web development, 
        mobile application development and machine learning with clients’ needs in mind.</p>
 
 <p><b><u>Projects I've Worked:</u></b></p>
-  <h8><u><b>Next Generation Soil Moisture Prediction:</b></u></h8>hello
+  <h8><u><b>Next Generation Soil Moisture Prediction:</b></u></h8>
 <p>I developed a full-stack web application for an organizational project using Django for the backend and Angular for the frontend.
    I implemented a predictive model using LSTM to forecast soil moisture levels based on project data. Additionally,
   I manage and incorporate weekly client requests, ensuring the project evolves to meet dynamic needs. The project is deployed on AWS, where I also set up the server infrastructure.</p>
@@ -110,7 +115,7 @@ I significantly contributed to the design, implementation, and enhancement of th
     </ol>
   </ul>
 </p> -->
-  <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+  <h3 class="w3-padding-16 w3-text-light-black">My Skills</h3>
     
     <div><span class="w3-wide">Amazon Web Services-AWS</span><span class="s2">90%</span></div><br>
     <div class="w3-white">
@@ -203,14 +208,14 @@ I significantly contributed to the design, implementation, and enhancement of th
   
   <!-- Portfolio Section -->
   <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">My Outputs</h2>
+    <h2 class="w3-text-light-black">My Outputs:</h2>
     <hr style="width:200px" class="w3-opacity">
 
     <!-- Grid for photos -->
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-half">
         <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-        <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+        <img src="./assets/folsom.gif.gif" style="width:100%; height: 50%">
         <img src="https://www.w3schools.com/w3images/sailboat.jpg" style="width:100%">
       </div>
 
@@ -231,9 +236,9 @@ I significantly contributed to the design, implementation, and enhancement of th
     <hr style="width:200px" class="w3-opacity">
 
     <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Vellore, IN</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +91 6382957593</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: elumalaiesk7887@gmail.com</p>
+      <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Vellore, IN</p>
+      <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: +91 6382957593</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i> Email: elumalaiesk7887@gmail.com</p>
     </div><br>
     <p>Let's get in touch. Send me a message:</p>
 

@@ -67,4 +67,8 @@
 .color3.animated {
     width: 30%;
 }
-  
+
+.w3-sidebar{
+    border-color: black;
+    background-color: blueviolet;
+}
