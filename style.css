@@ -85,3 +85,14 @@
     white-space: nowrap;
     overflow: hidden;
   }
+
+  .skill .w3-white {
+    position: relative;
+    background: #f1f1f1;
+  }
+  
+  .skill div[class^="color"] {
+    background: #4caf50; /* Change as needed */
+    transition: width 1s ease-out;
+  }
+  

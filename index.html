@@ -116,24 +116,36 @@ I significantly contributed to the design, implementation, and enhancement of th
     </ol>
   </ul>
 </p> -->
-  <h3 class="w3-padding-16 w3-text-light-black">Platforms Worked:</h3>
-    
-    <div><span class="w3-wide">Amazon Web Services-AWS</span><span class="s2"></span></div><br>
-    <div class="w3-white">
-      <div class="color" style="height:28px"></div>
-    </div><br>
-    <div><span class="w3-wide">Data Science</span>    <span class="s3"></span></div><br>
-    <div class="w3-white">
-      <div class="color1" style="height:28px"></div>
-    </div><br>
-    <div><span class="w3-wide">Web Development</span><span class="s1"></span></div><br>
-    <div class="w3-white">
-      <div class="color2" style="height:28px"></div>
-    </div><br>
-   <div> <span class="w3-wide">App Development</span><span class="s1"></span></div><br>
-    <div class="w3-white">
-      <div class="color3" style="height:28px"></div>
-    </div><br>
+<h3 class="w3-padding-16 w3-text-light-black">My Skills</h3>
+
+<div class="skill">
+  <span class="w3-wide">Amazon Web Services-AWS</span>
+  <div class="w3-white">
+    <div class="color" style="height:28px; width: 0;"></div>
+  </div>
+</div>
+
+<div class="skill">
+  <span class="w3-wide">Data Science</span>
+  <div class="w3-white">
+    <div class="color1" style="height:28px; width: 0;"></div>
+  </div>
+</div>
+
+<div class="skill">
+  <span class="w3-wide">Web Development</span>
+  <div class="w3-white">
+    <div class="color2" style="height:28px; width: 0;"></div>
+  </div>
+</div>
+
+<div class="skill">
+  <span class="w3-wide">App Development</span>
+  <div class="w3-white">
+    <div class="color3" style="height:28px; width: 0;"></div>
+  </div>
+</div>
+<br>
 
     <h3 class="w3-padding-16 w3-text-light-black">My Skills</h3>
     <div class="skills-section" id="skills-section">
@@ -272,10 +284,11 @@ I significantly contributed to the design, implementation, and enhancement of th
   <h6><u>Social Media profiles</u></h6>
   <i class="fa fa-facebook-official w3-hover-opacity"></i>
   <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
+  <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+  <!-- <i class="fa fa-twitter w3-hover-opacity"></i> -->
   <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <a class="fa fa-github" href=""></a>
 </footer>
 </div>
 <!-- END PAGE CONTENT -->
@@ -335,6 +348,20 @@ I significantly contributed to the design, implementation, and enhancement of th
   });
 
   observer.observe(skillsSection);
+
+  document.addEventListener("scroll", () => {
+  const skills = document.querySelectorAll(".skill div[class^='color']");
+  const triggerPoint = window.innerHeight;
+
+  skills.forEach((skill, index) => {
+    const skillTop = skill.getBoundingClientRect().top;
+
+    if (skillTop < triggerPoint) {
+      skill.style.width = `${(index + 1) * 20}%`; // Customize widths
+    }
+  });
+});
+
 </script>
 
 </body>
