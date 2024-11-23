@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./scripts.js">
     <style>
     body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     .w3-row-padding img {margin-bottom: 12px}
@@ -115,24 +116,45 @@ I significantly contributed to the design, implementation, and enhancement of th
     </ol>
   </ul>
 </p> -->
-  <h3 class="w3-padding-16 w3-text-light-black">My Skills</h3>
-    
-    <div><span class="w3-wide">Amazon Web Services-AWS</span><span class="s2">90%</span></div><br>
-    <div class="w3-white">
-      <div class="color" style="height:28px"></div>
-    </div><br>
-    <div><span class="w3-wide">Data Science</span>    <span class="s3">75%</span></div><br>
-    <div class="w3-white">
-      <div class="color1" style="height:28px"></div>
-    </div><br>
-    <div><span class="w3-wide">Web Development</span><span class="s1">55%</span></div><br>
-    <div class="w3-white">
-      <div class="color2" style="height:28px"></div>
-    </div><br>
-   <div> <span class="w3-wide">App Development</span><span class="s1">30%</span></div><br>
-    <div class="w3-white">
-      <div class="color3" style="height:28px"></div>
-    </div><br>
+<h3 class="w3-padding-16 w3-text-light-black">My Skills</h3>
+
+<div class="skill">
+  <span class="w3-wide">Amazon Web Services-AWS</span>
+  <div class="w3-white">
+    <div class="color" style="height:28px; width: 0;"></div>
+  </div>
+</div>
+
+<div class="skill">
+  <span class="w3-wide">Data Science</span>
+  <div class="w3-white">
+    <div class="color1" style="height:28px; width: 0;"></div>
+  </div>
+</div>
+
+<div class="skill">
+  <span class="w3-wide">Web Development</span>
+  <div class="w3-white">
+    <div class="color2" style="height:28px; width: 0;"></div>
+  </div>
+</div>
+
+<div class="skill">
+  <span class="w3-wide">App Development</span>
+  <div class="w3-white">
+    <div class="color3" style="height:28px; width: 0;"></div>
+  </div>
+</div>
+<br>
+
+    <h3 class="w3-padding-16 w3-text-light-black">My Skills</h3>
+    <div class="skills-section" id="skills-section">
+      <p><span class="bold">Programming Languages:</span> <span id="languages" class="typing"></span></p>
+      <p><span class="bold">Frontend Development:</span> <span id="frontend" class="typing"></span></p>
+      <p><span class="bold">Backend Development:</span> <span id="backend" class="typing"></span></p>
+      <p><span class="bold">Machine Learning:</span> <span id="ml" class="typing"></span></p>
+      <p><span class="bold">Tools & Frameworks:</span> <span id="tools" class="typing"></span></p>
+    </div>
     
     <!-- <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
       <div class="w3-quarter w3-section">
@@ -262,13 +284,85 @@ I significantly contributed to the design, implementation, and enhancement of th
   <h6><u>Social Media profiles</u></h6>
   <i class="fa fa-facebook-official w3-hover-opacity"></i>
   <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
+  <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+  <!-- <i class="fa fa-twitter w3-hover-opacity"></i> -->
   <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <a class="fa fa-github" href=""></a>
 </footer>
 </div>
 <!-- END PAGE CONTENT -->
+ <script>
+   const skills = {
+    languages: ["Python", "JavaScript", "Java"],
+    frontend: ["HTML", "CSS", "React", "Angular", "Tailwind CSS"],
+    backend: ["Django", "Node.js", "Flask"],
+    ml: ["TensorFlow", "PyTorch", "Scikit-learn"],
+    tools: ["Streamlit", "Kivy", "YOLO"]
+  };
+
+  // Typing effect function
+  function typeEffect(elementId, textArray) {
+    const element = document.getElementById(elementId);
+    let textIndex = 0;
+    let charIndex = 0;
+
+    function typeChar() {
+      if (charIndex < textArray[textIndex].length) {
+        element.textContent += textArray[textIndex][charIndex];
+        charIndex++;
+        setTimeout(typeChar, 100); // Adjust typing speed
+      } else {
+        if (textIndex < textArray.length - 1) {
+          element.textContent += ", ";
+        }
+        textIndex++;
+        charIndex = 0;
+
+        if (textIndex < textArray.length) {
+          setTimeout(typeChar, 300); // Adjust delay between words
+        }
+      }
+    }
+
+    typeChar();
+  }
+
+  // Trigger typing effect when section is visible
+  const skillsSection = document.getElementById("skills-section");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Start the typing animation
+        typeEffect("languages", skills.languages);
+        typeEffect("frontend", skills.frontend);
+        typeEffect("backend", skills.backend);
+        typeEffect("ml", skills.ml);
+        typeEffect("tools", skills.tools);
+        // Add visible class for fade-in effect
+        skillsSection.classList.add("visible");
+        // Disconnect observer to prevent re-triggering
+        observer.disconnect();
+      }
+    });
+  });
+
+  observer.observe(skillsSection);
+
+  document.addEventListener("scroll", () => {
+  const skills = document.querySelectorAll(".skill div[class^='color']");
+  const triggerPoint = window.innerHeight;
+
+  skills.forEach((skill, index) => {
+    const skillTop = skill.getBoundingClientRect().top;
+
+    if (skillTop < triggerPoint) {
+      skill.style.width = `${(index + 1) * 20}%`; // Customize widths
+    }
+  });
+});
+
+</script>
 
 </body>
 </html>

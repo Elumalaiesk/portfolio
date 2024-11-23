@@ -56,10 +56,10 @@
 
 /* Animation on page load using JavaScript */
 .color.animated {
-    width: 90%; /* Set to desired final width */
+    width: 75%; /* Set to desired final width */
 }
 .color1.animated {
-    width: 75%;
+    width: 70%;
 }
 .color2.animated {
     width: 55%;
@@ -72,3 +72,27 @@
     border-color: black;
     background-color: blueviolet;
 }
+
+.skills-section {
+    max-width: 600px;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .typing {
+    display: inline;
+    border-right: 2px solid #000;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .skill .w3-white {
+    position: relative;
+    background: #f1f1f1;
+  }
+  
+  .skill div[class^="color"] {
+    background: #4caf50; /* Change as needed */
+    transition: width 1s ease-out;
+  }
+  
