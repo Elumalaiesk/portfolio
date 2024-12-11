@@ -27,61 +27,23 @@
     transition: width 2s ease-in-out; /* Smooth transition for growing effect */
 }
 
-.color {
-    background-color: rgb(58, 235, 58);
-}
-.color1 {
-    background-color: rgb(0, 195, 255);
-}
-.color2 {
-    background-color: rgb(248, 14, 229);
-}
-.color3 {
-    background-color: rgb(255, 0, 0);
-}
-
-/* Hover effect */
-.w3-white:hover .color {
-    width: 90%; /* Set to desired width */
-}
-.w3-white:hover .color1 {
-    width: 75%;
-}
-.w3-white:hover .color2 {
-    width: 55%;
-}
-.w3-white:hover .color3 {
-    width: 30%;
-}
 
 /* Animation on page load using JavaScript */
-.color.animated {
-    width: 75%; /* Set to desired final width */
-}
-.color1.animated {
-    width: 70%;
-}
-.color2.animated {
-    width: 55%;
-}
-.color3.animated {
-    width: 30%;
-}
 
 .w3-sidebar{
     border-color: black;
-    background-color: blueviolet;
+    background-color: rgb(253, 253, 253);
 }
 
 .skills-section {
-    max-width: 600px;
+    max-width: 700px;
   }
   .bold {
     font-weight: bold;
   }
   .typing {
-    display: inline;
-    border-right: 2px solid #000;
+    display:inline;
+    /* border-right: 10px solid #000; */
     white-space: nowrap;
     overflow: hidden;
   }
@@ -92,7 +54,25 @@
   }
   
   .skill div[class^="color"] {
-    background: #4caf50; /* Change as needed */
+    background: #00daf7; /* Change as needed */
     transition: width 1s ease-out;
   }
-  
+
+  .skill div[class^="color1"] {
+    background: #f05902; /* Change as needed */
+    transition: width 1s ease-out;
+  }
+
+  .skill div[class^="color2"] {
+    background: #a405ee; /* Change as needed */
+    transition: width 1s ease-out;
+  }
+
+  .skill div[class^="color3"] {
+    background: #4caf50; /* Change as needed */ 
+    transition: width 1s ease-out;
+  }
+.gif{
+    height: 80vh;
+    right: 20vw;
+}
